@@ -17,6 +17,19 @@ namespace DataBase
 {
     class User
     {
+    class ShoppingCart
+    {
+        List<Item> item_list;
+
+        public ShoppingCart()
+        {
+            item_list = new List<Item>();
+        }
+        public void addItem(Item item)
+        {
+            this.item_list.Add(item);
+        }
+    }   
         public string ID;
         ShoppingCart cart;
         
@@ -37,20 +50,7 @@ namespace DataBase
 
     }
 
-    class ShoppingCart
-        {
-           List<Item> item_list;
-
-           public ShoppingCart()
-           {
-               item_list = new List<Item>();
-           }
-
-           public void addItem(Item item)
-           {
-               this.item_list.Add(item);
-           }
-        }
+    
 
     class Item
     {
